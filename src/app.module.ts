@@ -25,7 +25,7 @@ import { UsersModule } from './users/users.module';
     useFactory: (config: ConfigService) => ({
         type: 'mysql',
         host: config.get<string>('DATABASE_HOST'),
-        port: +config.get<string>('DATABASE_PORT')!,
+        port: config.get<number>('DATABASE_PORT'),
         username: config.get<string>('DATABASE_USERNAME'),
         password: config.get<string>('DATABASE_PASSWORD'),
         database: config.get<string>('DATABASE_NAME'),
