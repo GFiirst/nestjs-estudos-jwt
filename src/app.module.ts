@@ -29,7 +29,7 @@ import { UsersModule } from './users/users.module';
         username: config.get<string>('DATABASE_USERNAME'),
         password: config.get<string>('DATABASE_PASSWORD'),
         database: config.get<string>('DATABASE_NAME'),
-        entities: [`${__dirname}/**/*.entity{.js,.ts}`],
+        entities: [User],
         migrations: [`${__dirname}/migration/{.ts,*.js}`],
         synchronize: false,
         migrationsRun: true,
